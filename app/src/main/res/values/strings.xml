@@ -11,4 +11,7 @@
     <string name="second_api">Second API</string>
     <string name="zero_length_error">An error was occurred. Length must be greater than zero</string>
     <string name="connection_error">Check your internet connection</string>
+    <string name="nothing_to_translate_error">There is nothing to translate</string>
+    <string name="translate">translate</string>
+    <string name="cats">cats</string>
 </resources>

@@ -7,7 +7,7 @@ import androidx.lifecycle.MutableLiveData;
 import com.netimur.firsttask.NetworkConnectable;
 import com.netimur.firsttask.ToastShowCapable;
 
-public interface SecondApiContract {
+public interface FactsContract {
     interface View extends ToastShowCapable {
         void showFact(String fact);
         Context getContext();
@@ -16,10 +16,15 @@ public interface SecondApiContract {
 
     interface Presenter extends NetworkConnectable {
         void onButtonClick();
-
+        void onTranslatorButtonClick();
+        void setSavedFact(String fact);
     }
 
     interface Repository{
-        MutableLiveData getFact();
+        MutableLiveData<String> getFact();
+    }
+
+    interface TranslatorContract {
+        MutableLiveData<String> getTranslation(String message);
     }
 }

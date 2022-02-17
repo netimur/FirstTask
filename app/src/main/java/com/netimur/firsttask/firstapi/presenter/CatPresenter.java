@@ -2,23 +2,20 @@ package com.netimur.firsttask.firstapi.presenter;
 
 
 import com.netimur.firsttask.R;
-import com.netimur.firsttask.firstapi.FirstApiContract;
+import com.netimur.firsttask.firstapi.CatPicContract;
 import com.netimur.firsttask.utils.Constants;
 import com.squareup.picasso.Picasso;
 
-public class FirstApiPresenter implements FirstApiContract.Presenter {
-    private FirstApiContract.View view;
+public class CatPresenter implements CatPicContract.Presenter {
+    private CatPicContract.View view;
 
-    public FirstApiPresenter(FirstApiContract.View view) {
+    public CatPresenter(CatPicContract.View view) {
         this.view = view;
     }
 
     @Override
     public boolean lengthIsGreaterThanZero(String message) {
-        if(message.length()>0)
-            return true;
-        else
-            return false;
+        return message.length() > 0;
     }
 
     @Override
@@ -26,7 +23,7 @@ public class FirstApiPresenter implements FirstApiContract.Presenter {
         Picasso.with(view.getContext())
                 .load(Constants.BASE_URL_FIRST_API + message)
                 .placeholder(R.drawable.pic_is_loading_placeholder)
-                .into(view.getBinding().imageViewFirstFragment);
+                .into(view.getBinding().catsImageView);
     }
 
     @Override

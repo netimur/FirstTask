@@ -1,37 +1,35 @@
-package com.netimur.firsttask.secondapi.model;
+package com.netimur.firsttask.secondapi.model.factapi;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
-import com.netimur.firsttask.secondapi.SecondApiContract;
+import com.netimur.firsttask.secondapi.FactsContract;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Repository implements SecondApiContract.Repository {
+public class FactRepository implements FactsContract.Repository {
 
     private MutableLiveData<String> fact = new MutableLiveData<>();
 
     private Call<CatFact> getFactFromServer() {
-        Call<CatFact> response = SecondApiRetrofitInstance.INSTANCE.getRetrofit().getFact();
-        return response;
+        return FactApiRetrofitInstance.INSTANCE.getRETROFIT().getFact();
     }
 
-    public void parseResponse(Call<CatFact> response) {
+    private void parseResponse(Call<CatFact> response) {
         response.enqueue(new Callback<CatFact>() {
             @Override
-            public void onResponse(Call<CatFact> call, Response<CatFact> response) {
+            public void onResponse(@NonNull Call<CatFact> call, @NonNull Response<CatFact> response) {
                 assert response.body() != null;
                 fact.setValue(response.body().fact);
             }
 
             @Override
-            public void onFailure(Call<CatFact> call, Throwable t) {
+            public void onFailure(@NonNull Call<CatFact> call, @NonNull Throwable t) {
             }
 
         });
-
-
     }
 
     public MutableLiveData<String> getFact() {

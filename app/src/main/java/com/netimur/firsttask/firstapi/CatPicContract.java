@@ -5,11 +5,11 @@ import android.content.Context;
 
 import com.netimur.firsttask.NetworkConnectable;
 import com.netimur.firsttask.ToastShowCapable;
-import com.netimur.firsttask.databinding.FragmentFirstApiBinding;
+import com.netimur.firsttask.databinding.FragmentPictureBinding;
 
-public interface FirstApiContract {
+public interface CatPicContract {
     interface View extends ToastShowCapable {
-        FragmentFirstApiBinding getBinding();
+        FragmentPictureBinding getBinding();
         Context getContext();
 
     }

@@ -7,18 +7,18 @@
 
     <fragment
         android:id="@+id/firstApiFragment"
-        android:name="com.netimur.firsttask.firstapi.view.FirstApiFragment"
+        android:name="com.netimur.firsttask.firstapi.view.CatPresentFragment"
         android:label="fragment_first_api"
-        tools:layout="@layout/fragment_first_api" >
+        tools:layout="@layout/fragment_picture" >
         <action
             android:id="@+id/action_firstApiFragment_to_secondApiFragment"
             app:destination="@id/secondApiFragment" />
     </fragment>
     <fragment
         android:id="@+id/secondApiFragment"
-        android:name="com.netimur.firsttask.secondapi.view.SecondApiFragment"
+        android:name="com.netimur.firsttask.secondapi.view.FactFragment"
         android:label="fragment_second_api"
-        tools:layout="@layout/fragment_second_api" >
+        tools:layout="@layout/fragment_fact" >
         <action
             android:id="@+id/action_secondApiFragment_to_firstApiFragment"
             app:destination="@id/firstApiFragment" />
