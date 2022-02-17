@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FirstTask</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="first_fragment_edit_text_hint">Fill in this field</string>
+    <string name="send_request">Send request</string>
+    <string name="sample_text">In the 1930s, two Russian biologists discovered that color change in Siamese kittens depend on their body temperature. Siamese cats carry albino genes that work only when the body temperature is above 98° F. If these kittens are left in a very warm room, their points won’t darken and they will stay a creamy white.</string>
+    <string name="get_fact">Get fact</string>
+    <string name="fact_hint_for_user">Press the button below to get a fact</string>
+    <string name="first_api">First API</string>
+    <string name="second_api">Second API</string>
+    <string name="zero_length_error">An error was occurred. Length must be greater than zero</string>
+    <string name="connection_error">Check your internet connection</string>
+</resources>

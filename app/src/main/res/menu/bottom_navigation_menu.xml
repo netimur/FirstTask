@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/firstApiFragment"
+        android:icon="@drawable/image_pic"
+        android:title="@string/first_api" />
+    <item
+        android:id="@+id/secondApiFragment"
+        android:icon="@drawable/text_pic"
+        android:title="@string/second_api" />
+
+</menu>
