@@ -54,5 +54,4 @@ public class FactPresenter implements FactsContract.Presenter {
     }
 
 
-
 }
