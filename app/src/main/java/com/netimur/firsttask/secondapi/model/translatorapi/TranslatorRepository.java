@@ -1,7 +1,5 @@
 package com.netimur.firsttask.secondapi.model.translatorapi;
 
-import android.os.Parcelable;
-
 import androidx.lifecycle.MutableLiveData;
 
 import com.netimur.firsttask.secondapi.FactsContract;
@@ -18,9 +16,8 @@ public class TranslatorRepository implements FactsContract.TranslatorContract{
         if (message!=null){
             Call<Translation> translationResponse =
                     TranslatorApiRetrofitInstance
-                            .INSTANCE
-                            .getRetrofit()
-                            .translateText(new TranslatorRequestBody(message));
+                    .getInstance()
+                    .translateText(new TranslatorRequestBody(message));
             translationResponse.enqueue(new Callback<Translation>() {
                 @Override
                 public void onResponse(Call<Translation> call, Response<Translation> response) {

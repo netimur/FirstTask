@@ -44,10 +44,16 @@ public class CatPresentFragment extends Fragment implements CatPicContract.View 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        if (binding.catsImageView.getDrawable() != null) {
-            Bitmap imageToSave = drawableToBitmap((Drawable) binding.catsImageView.getDrawable());
-            outState.putParcelable(IMAGE_KEY, imageToSave);
+        try {
+            if (binding.catsImageView.getDrawable() != null) {
+                Bitmap imageToSave = drawableToBitmap((Drawable) binding.catsImageView.getDrawable());
+                outState.putParcelable(IMAGE_KEY, imageToSave);
+            }
         }
+        catch (NullPointerException e){
+
+        }
+
         Log.d(COMMON_KEY, "onSaveInstanceState");
     }
 
