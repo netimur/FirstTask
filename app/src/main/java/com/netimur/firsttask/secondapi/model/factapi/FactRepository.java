@@ -14,7 +14,7 @@ public class FactRepository implements FactsContract.Repository {
     private MutableLiveData<String> fact = new MutableLiveData<>();
 
     private Call<CatFact> getFactFromServer() {
-        return FactApiRetrofitInstance.getInstance().getFact();
+        return FactApiRetrofitInstance.getInstance().getFactApi().getFact();
     }
 
     private void parseResponse(Call<CatFact> response) {
@@ -36,6 +36,4 @@ public class FactRepository implements FactsContract.Repository {
         parseResponse(getFactFromServer());
         return fact;
     }
-
-
 }

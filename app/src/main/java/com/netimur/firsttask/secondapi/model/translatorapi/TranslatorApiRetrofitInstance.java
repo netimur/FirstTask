@@ -6,19 +6,23 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class TranslatorApiRetrofitInstance {
-    private static volatile TranslatorApi instance;
 
-    private TranslatorApiRetrofitInstance(){
-        instance = new Retrofit.Builder()
+    private static final TranslatorApiRetrofitInstance instance = new TranslatorApiRetrofitInstance();
+    private final TranslatorApi translatorApi;
+
+    private TranslatorApiRetrofitInstance() {
+        this.translatorApi = new Retrofit.Builder()
                 .baseUrl(Constants.BASE_URL_TRANSLATOR_API)
                 .addConverterFactory(GsonConverterFactory.create())
-                .build()
-                .create(TranslatorApi.class);
+                .build().create(TranslatorApi.class);
     }
-    public static synchronized TranslatorApi getInstance(){
-        if(instance ==null){
-            new TranslatorApiRetrofitInstance();
-        }
+
+    public static synchronized TranslatorApiRetrofitInstance getInstance() {
         return instance;
     }
+
+    public TranslatorApi getTranslatorApi() {
+        return this.translatorApi;
+    }
+
 }

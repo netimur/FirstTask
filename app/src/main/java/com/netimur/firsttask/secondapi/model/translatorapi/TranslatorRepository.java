@@ -8,16 +8,17 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class TranslatorRepository implements FactsContract.TranslatorContract{
+public class TranslatorRepository implements FactsContract.TranslatorContract {
 
     private MutableLiveData<String> translation = new MutableLiveData<>();
 
     private void translateText(String message) {
-        if (message!=null){
+        if (message != null) {
             Call<Translation> translationResponse =
                     TranslatorApiRetrofitInstance
-                    .getInstance()
-                    .translateText(new TranslatorRequestBody(message));
+                            .getInstance()
+                            .getTranslatorApi()
+                            .translateText(new TranslatorRequestBody(message));
             translationResponse.enqueue(new Callback<Translation>() {
                 @Override
                 public void onResponse(Call<Translation> call, Response<Translation> response) {

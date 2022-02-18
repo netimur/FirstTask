@@ -6,21 +6,23 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class FactApiRetrofitInstance {
-    private static volatile FactApi instance;
+
+    private static final FactApiRetrofitInstance instance = new FactApiRetrofitInstance();
+    private final FactApi factApi;
 
     private FactApiRetrofitInstance() {
-        instance = new Retrofit.Builder()
+        this.factApi = new Retrofit.Builder()
                 .baseUrl(Constants.BASE_URL_SECOND_API)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
                 .create(FactApi.class);
     }
 
-    public static synchronized FactApi getInstance() {
-        if(instance==null){
-            new FactApiRetrofitInstance();
-        }
+    public static synchronized FactApiRetrofitInstance getInstance() {
         return instance;
     }
 
+    public FactApi getFactApi() {
+        return this.factApi;
+    }
 }

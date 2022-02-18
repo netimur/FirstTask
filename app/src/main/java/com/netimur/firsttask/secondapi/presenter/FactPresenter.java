@@ -5,6 +5,8 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.netimur.firsttask.R;
 import com.netimur.firsttask.secondapi.FactsContract;
+import com.netimur.firsttask.secondapi.model.factapi.FactApi;
+import com.netimur.firsttask.secondapi.model.factapi.FactApiRetrofitInstance;
 import com.netimur.firsttask.secondapi.model.factapi.FactRepository;
 import com.netimur.firsttask.secondapi.model.translatorapi.TranslatorRepository;
 
@@ -50,6 +52,7 @@ public class FactPresenter implements FactsContract.Presenter {
     public void setSavedFact(String fact) {
         this.fact.setValue(fact);
     }
+
 
 
 }
