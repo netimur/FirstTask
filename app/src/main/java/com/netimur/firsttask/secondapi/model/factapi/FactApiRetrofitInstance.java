@@ -18,7 +18,7 @@ public class FactApiRetrofitInstance {
                 .create(FactApi.class);
     }
 
-    public static synchronized FactApiRetrofitInstance getInstance() {
+    public static FactApiRetrofitInstance getInstance() {
         return instance;
     }
 

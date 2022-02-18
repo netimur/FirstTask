@@ -17,7 +17,7 @@ public class TranslatorApiRetrofitInstance {
                 .build().create(TranslatorApi.class);
     }
 
-    public static synchronized TranslatorApiRetrofitInstance getInstance() {
+    public static TranslatorApiRetrofitInstance getInstance() {
         return instance;
     }
 
