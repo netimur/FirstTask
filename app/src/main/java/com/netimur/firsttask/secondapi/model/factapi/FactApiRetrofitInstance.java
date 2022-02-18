@@ -6,7 +6,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class FactApiRetrofitInstance {
-    private static FactApi instance;
+    private static volatile FactApi instance;
 
     private FactApiRetrofitInstance() {
         instance = new Retrofit.Builder()

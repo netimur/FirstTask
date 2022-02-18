@@ -6,7 +6,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class TranslatorApiRetrofitInstance {
-    private static TranslatorApi instance;
+    private static volatile TranslatorApi instance;
 
     private TranslatorApiRetrofitInstance(){
         instance = new Retrofit.Builder()
