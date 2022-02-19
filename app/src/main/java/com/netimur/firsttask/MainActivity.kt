@@ -1,3 +1,4 @@
+/*
 package com.netimur.firsttask
 
 import android.content.pm.ActivityInfo
@@ -23,4 +24,4 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.setupWithNavController(navController)
 
     }
-}
+}*/
