@@ -29,7 +29,6 @@ public class CatPresentFragment extends Fragment implements CatPicContract.View 
     private String IMAGE_KEY = "image";
     private String COMMON_KEY = "COMMON_KEY";
 
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -37,9 +36,10 @@ public class CatPresentFragment extends Fragment implements CatPicContract.View 
         View view = binding.getRoot();
         presenter = new CatPresenter(this);
         binding.buttonFirstFragment.setOnClickListener(view1 -> presenter.onClick(binding.editTextFirstFragment.getText().toString()));
-
         return view;
     }
+
+
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
