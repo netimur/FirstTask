@@ -20,10 +20,14 @@ public class CatPresenter implements CatPicContract.Presenter {
 
     @Override
     public void loadPictureWithMessage(String message) {
-        Picasso.with(view.getContext())
-                .load(Constants.BASE_URL_FIRST_API + message)
+        Picasso.get().load(Constants.BASE_URL_FIRST_API + message)
                 .placeholder(R.drawable.pic_is_loading_placeholder)
                 .into(view.getBinding().catsImageView);
+
+    /*.with(view.getContext())
+                .load(Constants.BASE_URL_FIRST_API + message)
+                .placeholder(R.drawable.pic_is_loading_placeholder)
+                .into(view.getBinding().catsImageView);*/
     }
 
     @Override
