@@ -23,7 +23,7 @@ public class TranslatorRepository implements FactsContract.TranslatorContract {
                 @Override
                 public void onResponse(Call<Translation> call, Response<Translation> response) {
                     assert response.body() != null;
-                    translation.setValue(response.body().translatedText);
+                    translation.setValue(response.body().getTranslatedText());
                 }
 
                 @Override

@@ -22,7 +22,7 @@ public class FactRepository implements FactsContract.Repository {
             @Override
             public void onResponse(@NonNull Call<CatFact> call, @NonNull Response<CatFact> response) {
                 assert response.body() != null;
-                fact.setValue(response.body().fact);
+                fact.setValue(response.body().getFact());
             }
 
             @Override
