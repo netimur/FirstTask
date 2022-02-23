@@ -12,7 +12,6 @@
         android:layout_height="400dp"
         android:fontFamily="@font/jetbrainsmono_regular"
         android:text="@string/fact_hint_for_user"
-        android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
