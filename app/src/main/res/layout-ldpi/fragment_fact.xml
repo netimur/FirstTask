@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".secondapi.view.FactFragment">
+
+    <TextView
+        android:id="@+id/fact_text_view"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:fontFamily="@font/jetbrainsmono_regular"
+        android:text="@string/fact_hint_for_user"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_ldpi"
+        app:layout_constraintBottom_toTopOf="@id/button_get_fact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/sample_text" />
+
+    <Button
+        android:id="@+id/button_get_fact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:fontFamily="@font/jetbrainsmono_regular"
+        android:text="@string/get_fact"
+        android:textSize="@dimen/text_size_ldpi"
+        app:layout_constraintBottom_toTopOf="@id/translate_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/translate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/regular_margin"
+        android:fontFamily="@font/jetbrainsmono_regular"
+        android:text="@string/translate"
+        android:textSize="@dimen/text_size_ldpi"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,4 +3,6 @@
     <dimen name="regular_margin">20dp</dimen>
     <dimen name="small_margin">10dp</dimen>
     <dimen name="xlarge_margin">50dp</dimen>
+    <dimen name="text_size_ldpi">10sp</dimen>
+    <dimen name="text_size_hdpi">14sp</dimen>
 </resources>

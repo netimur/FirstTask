@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".firstapi.view.CatPresentFragment">
+
+    <ImageView
+        android:id="@+id/cats_image_view"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="@dimen/regular_margin"
+        android:contentDescription="@string/cats"
+        app:layout_constraintBottom_toTopOf="@id/edit_text_first_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_text_first_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/regular_margin"
+        android:layout_marginTop="@dimen/regular_margin"
+        android:fontFamily="@font/jetbrainsmono_regular"
+        android:hint="@string/first_fragment_edit_text_hint"
+        android:textSize="@dimen/text_size_ldpi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cats_image_view" />
+
+    <Button
+        android:id="@+id/button_first_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/regular_margin"
+        android:fontFamily="@font/jetbrainsmono_regular"
+        android:text="@string/send_request"
+        android:textSize="@dimen/text_size_ldpi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_text_first_fragment" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
