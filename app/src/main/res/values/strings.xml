@@ -14,4 +14,6 @@
     <string name="nothing_to_translate_error">There is nothing to translate</string>
     <string name="translate">translate</string>
     <string name="cats">cats</string>
+    <string name="fact_api">Fact API</string>
+    <string name="picture_api">Pic API</string>
 </resources>

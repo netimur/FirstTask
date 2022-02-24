@@ -3,10 +3,10 @@
     <item
         android:id="@+id/firstApiFragment"
         android:icon="@drawable/image_pic"
-        android:title="@string/first_api" />
+        android:title="@string/picture_api" />
     <item
         android:id="@+id/secondApiFragment"
         android:icon="@drawable/text_pic"
-        android:title="@string/second_api" />
+        android:title="@string/fact_api" />
 
 </menu>
